@@ -1,5 +1,12 @@
 # Hytale Plugin Examples
 
+## Setup
+
+1. Download "HytaleServer.jar" file.
+2. Place jar file under "libraries/" directory.
+
+## Examples
+
 - Commands
     - [Example command](src/main/java/com/example/plugin/commands/ExampleCommand.java)
     - [Change camera settings](src/main/java/com/example/plugin/commands/CameraCommand.java)
