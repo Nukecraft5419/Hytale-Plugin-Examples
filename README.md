@@ -10,6 +10,7 @@
 - Commands
     - [Example command](src/main/java/com/example/plugin/commands/ExampleCommand.java)
     - [Change camera settings](src/main/java/com/example/plugin/commands/CameraCommand.java)
+    - [Send a private message to a player](src/main/java/com/example/plugin/commands/MsgCommand.java)
     - [Send player to another server](src/main/java/com/example/plugin/commands/SendCommand.java)
     - [Display title and subtitle to all players](src/main/java/com/example/plugin/commands/TitleCommand.java)
 
