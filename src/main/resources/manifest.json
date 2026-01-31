@@ -1,8 +1,8 @@
 {
-  "Group": "com.example",
-  "Name": "ExamplePlugin",
-  "Version": "1.0.0",
-  "Description": "Your plugin description here.",
+  "Group": "${Group}",
+  "Name": "${Name}",
+  "Version": "${Version}",
+  "Description": "${Description}",
   "Authors": [
     {
       "Name": "Your Name",
@@ -10,10 +10,10 @@
       "Url": "https://example.com"
     }
   ],
-  "Website": "https://example.com",
+  "Website": "${Website}",
   "ServerVersion": "*",
   "Dependencies": {},
   "OptionalDependencies": {},
   "DisabledByDefault": false,
-  "Main": "com.example.plugin.ExamplePlugin"
+  "Main": "${Main}"
 }

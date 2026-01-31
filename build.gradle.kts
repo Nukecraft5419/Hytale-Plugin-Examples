@@ -2,8 +2,8 @@ plugins {
     id("java")
 }
 
-group = "com.example"
-version = "1.0-SNAPSHOT"
+group to project.property("group")
+version to project.property("version")
 
 repositories {
     mavenCentral()
@@ -34,5 +34,21 @@ tasks.withType<JavaCompile>().configureEach {
 tasks {
     test {
         useJUnitPlatform()
+    }
+}
+
+tasks.withType<ProcessResources>().configureEach {
+    val props = mapOf(
+        "Group" to project.property("group"),
+        "Name" to project.property("name"),
+        "Version" to project.property("version"),
+        "Description" to project.property("description"),
+        "Website" to project.property("website"),
+        "Main" to project.property("main"),
+    )
+    inputs.properties(props)
+    filteringCharset = "UTF-8"
+    filesMatching("manifest.json") {
+        expand(props)
     }
 }
