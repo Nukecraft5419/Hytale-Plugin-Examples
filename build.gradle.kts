@@ -2,8 +2,8 @@ plugins {
     id("java")
 }
 
-group to project.property("group")
-version to project.property("version")
+group = providers.gradleProperty("group").get()
+version = providers.gradleProperty("version").get()
 
 repositories {
     mavenCentral()
@@ -39,12 +39,12 @@ tasks {
 
 tasks.withType<ProcessResources>().configureEach {
     val props = mapOf(
-        "Group" to project.property("group"),
-        "Name" to project.property("name"),
-        "Version" to project.property("version"),
-        "Description" to project.property("description"),
-        "Website" to project.property("website"),
-        "Main" to project.property("main"),
+        "Group" to providers.gradleProperty("group").get(),
+        "Name" to providers.gradleProperty("name").get(),
+        "Version" to providers.gradleProperty("version").get(),
+        "Description" to providers.gradleProperty("description").get(),
+        "Website" to providers.gradleProperty("website").get(),
+        "Main" to providers.gradleProperty("main").get(),
     )
     inputs.properties(props)
     filteringCharset = "UTF-8"
