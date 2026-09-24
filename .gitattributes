@@ -6,4 +6,5 @@ gradlew.bat text eol=crlf
 
 # The remainder of the project
 *.java text eol=lf
-*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
